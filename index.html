@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <script>
+        //Кнопка читать полностью
+        function readMore(){
+            var more = document.getElementById("more");
+            var read = document.getElementById("read");
+
+            if(more.style.display === "inline"){
+                
+                more.style.display = "none";
+                read.style.display = "inline";
+            }
+            else{
+                more.style.display = "inline";
+                read.style.display = "none";
+            }
+        }
+        
+        //Модальное окно при нажатии цены
+        /*
+        document.addEventListener('DOMContentLoaded', function() {
+            var modalButtons = document.querySelectorAll('.js-open-modal'),
+                overlay = document.querySelector('#overlay-modal');
+        });
+        });
+        */
+
+        function PriceAAA(){
+            let button =$(".open-modal");
+            let modal = $(".modal");
+            let close_modal = $(".modal .close");
+
+            console.log(button);
+            button.click(function(){
+                modal.css("display","block");
+            });
+
+            close_modal.click(function(){
+                modal.css("display","none");
+            });
+
+        };
+
+    /*
+   modalButtons.forEach(function(item){
+      
+      item.addEventListener('click', function(e) {
+         
+         e.preventDefault();
+         var modalId = this.getAttribute('data-modal'),
+             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+         
+         modalElem.classList.add('active');
+         overlay.classList.add('active');
+      }); // end click
+   }); // end foreach
+}); // end ready
+
+        function PriceAAA(){
+            var modalButtons = document.querySelectorAll('.js-open-modal'),
+                overlay = document.querySelector('#overlay-modal');
+        }
+        */
+
+        /*
+        function f(){
+            let a = document.getElementById("text_information2").value="А ты мне опять сосвоим вот этим, иди суетись дальше, это твоё распределение, это твой путь и твой горизонт познания и ощущения твоей природы, он несоизмеримо мелок по сравнению с моим, понимаешь? Я как будто бы уже давно глубокий старец, бессмертный, ну или там уже почти бессмертный, который на этой планете от её самого зарождения, ещё когда только Солнце только-только сформировалось как звезда, и вот это газопылевое облако, вот, после взрыва, Солнца, когда оно вспыхнуло, как звезда, начало ормировать вот эти коацерваты, планеты, понимаешь, я на этой Земле уже как будто почти пять миллиардов лет живу и знаю её вдоль и поперёк этот весь мир, а ты мне какие-то... мне не важно на твои тачки, на твои яхты, на твои квартиры, там, на твоё благо.";
+            document.getElementById("text_information2").innerHTML=a;
+        }
+        */
+       
+        /*
+        var a = document.getElementById("price");
+        
+        a.oneclick = function(){
+            alert("Цена " + signature + title + " = " + price);
+        }
+        */
+       
+        /*
+        function PriceAAA(){
+            alert("aaaa");
+        }
+        */
+
+        /*
+        $(document).ready(function(){
+                alert("Цена " + signature + title + " = " + price);
+        });
+        */
+       
+    </script>
+    <header>
+        <div class="navigator">
+            <ul>
+                <li>Контрагентам</li>
+                <li>Дизайнерам</li>
+                <li>Вакансии</li>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="лого">
+        </div>
+        <div class="search_and_user">
+            <section>
+                <input type="search">
+            </section>
+            <a href="">Вход/Регистрация</a>
+            <section>
+                <img src="assets/images/пользователь.png" alt="user">
+                <img src="assets/images/сердечко (1).png" alt="favorites">
+            </section>
+        </div>
+    </header>
+    <div id="catalog">
+        <div class="filters">
+            <select id="brand">
+                <option>Бренд</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select id="price">
+                <option>Цена</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select id="from_whom">
+                <option>Для кого</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select id="colection">
+                <option>Коллекция</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select id="season">
+                <option>Сезон</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            <select id="event">
+                <option>Событие</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        <div class="products">
+            <div class="products1">
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature" id="signature">Подвеска</p>
+                    <p class="title" id="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+                    
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                     
+                </section>
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature">Подвеска</p>
+                    <p class="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                </section>
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature">Подвеска</p>
+                    <p class="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                </section>
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature">Подвеска</p>
+                    <p class="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                </section>
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature">Подвеска</p>
+                    <p class="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                </section>
+                <section>
+                    <img src="assets/images/rings.jpg" alt="">
+                    <p class="signature">Подвеска</p>
+                    <p class="title">Dolce & Gabanna</p>
+                    <button id="price" onclick="PriceAAA()" class="open-modal" data-modal="1">175 000 ₽</button>
+
+                    <div class="modal">
+                        <p class="close">X</p>
+                        <p>Подвеска</p>
+                        <p>Dolce & Gabanna</p>
+                        <p>175 000 ₽</p>
+                     </div>
+                </section>
+            </div>
+            <p class="more">ПОКАЖИТЕ ЕЩЕ</p>
+        </div>
+    </div>
+    <div id="info">
+        <div class="information">
+            <section id="information_text">
+                <p class="text_information">Я в своем познании настолько преисполнился, что я как будто бы уже
+
+                    сто триллионов миллиардов лет проживаю на триллионах и
+                    
+                    триллионах таких же планет, как эта Земля, мне этот мир абсолютно
+                    
+                    понятен, и я здесь ищу только одного - покоя, умиротворения и
+                    
+                    вот этой гармонии, от слияния с бесконечно вечным, от созерцания
+                    
+                    великого фрактального подобия и от вот этого замечательного всеединства
+                    
+                    существа, бесконечно вечного, куда ни посмотри, хоть вглубь - бесконечно
+                    
+                    малое, хоть ввысь - бесконечное большое, понимаешь? <span id="more">А ты мне опять сосвоим вот этим, иди суетись дальше, это твоё распределение, это твой путь и твой горизонт познания и ощущения твоей природы, он несоизмеримо мелок по сравнению с моим, понимаешь? Я как будто бы уже давно глубокий старец, бессмертный, ну или там уже почти бессмертный, который на этой планете от её самого зарождения, ещё когда только Солнце только-только сформировалось как звезда, и вот это газопылевое облако, вот, после взрыва, Солнца, когда оно вспыхнуло, как звезда, начало ормировать вот эти коацерваты, планеты, понимаешь, я на этой Земле уже как будто почти пять миллиардов лет живу и знаю её вдоль и поперёк этот весь мир, а ты мне какие-то... мне не важно на твои тачки, на твои яхты, на твои квартиры, там, на твоё благо.</span>
+                </p>
+            </section>
+            <p id="text_information2"></p>
+            <section class="btn">
+                <button id="read" onclick="readMore()">Читать полностью</button>
+            </section>
+        </div>
+        <div class="servies">
+            <section>
+                <img src="assets/images/машинка.jpg" alt="">
+                <p>Бесплатаня досавка</p>
+            </section>
+            <section>
+                <img src="assets/images/блокнотик.jpg" alt="">
+                <p>Индивидуальный дизайн</p>
+            </section>
+            <section>
+                <img src="assets/images/графика.jpg" alt="">
+                <p>Бесплатаня примерка</p>
+            </section>
+            <section>
+                <img src="assets/images/серги.jpg" alt="">
+                <p>Личный доход</p>
+            </section>
+        </div>
+    </div>
+    <div id="mailing">
+        <h1>Полезные советы и персональные предложения</h1>
+        <h2>Эксклюзивная рассылка</h2>
+        <section class="a">
+            <ul>
+                <li>Личный менеджер</li>
+                <li>Доставка и офрмление</li>
+                <li>Индивидуальный дизайн</li>
+            </ul>
+            <section class="aa1">
+                <section class="aa">
+                    <section>
+                        <input type="text" name="mail" placeholder="ВАШ E-MAIL">
+                        <button>Отправить</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </div>
+    <footer>
+        <div id="footer1">
+            <section>
+                <h3>Полезные ссылки</h3>
+                <ul>
+                    <li>Доставка</li>
+                    <li>Оплата</li>
+                    <li>Акции</li>
+                    <li>Политика конфинденцальности</li>
+                </ul>
+            </section>
+            <section class="a">
+                <h3>Оплата</h3>
+                <p>Текст Текст Текст Текст Текст Текст Текст Текст </p>
+                <ul>
+                    <li><img src="" alt=""></li>
+                    <li><img src="" alt=""></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Контакты</h3>
+                <ul>
+                    <li>
+                        <img src="" alt="">
+                        <p>8 (952)232-91-19</p>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <p>8 (952)232-91-19</p>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <p>ojjo@ojjo.ru</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="a">
+                <h3>Оплата</h3>
+                <p>Текст Текст Текст Текст Текст Текст Текст Текст </p>
+                <ul>
+                    <li><img src="assets/images/icons8-youtube-play-24.png" alt=""></li>
+                    <li><img src="assets/images/icons8-facebook-f-24.png" alt=""></li>
+                    <li><img src="assets/images/icons8-vk-24.png" alt=""></li>
+                    <li><img src="assets/images/icons8-телеграмма-app-48.png" alt=""></li>
+                </ul>
+            </section>
+        </div>
+        <section id="footer2">
+            <ul>
+                <li>(c) 2020 OJJO jewelry</li>
+                <li>Договор публичной офферты</li>
+                <li>Контрагентам</li>
+                <li>Сделано мной :)</li>
+            </ul>
+        </section>
+    </footer>
+    
+</body>
+</html>

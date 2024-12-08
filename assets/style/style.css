@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+header{
+    display: grid;
+    height: 15vh;
+    width: 80%;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    background: rgb(43, 39, 38);
+    padding: 0% 10% 0% 10%;
+}
+.navigator ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+.logo img{
+    width: 80%;
+    align-items: center;
+}
+.search_and_user{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+}
+.search_and_user input{
+    width: 70%;
+}
+.search_and_user{
+    font-size: 14px;
+    color: white;
+}
+.search_and_user a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#catalog{
+    display: grid;
+	width: 80%;
+	padding: 10vh 10% 0% 10%;
+}
+#catalog .filters{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 20px 0px;
+}
+.filters select{
+    padding: 5px;
+    height: 40px;
+    width: 90%;
+}
+#catalog .products1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#catalog .products1 section{
+    align-items: center;
+	justify-items: center;
+	text-align: center;
+    padding: 20px;
+}
+.products1 section img{
+    width: 300px;
+    margin-bottom: 15px;
+}
+.products1 section .signature{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.products1 section .title{
+    font-size: 30px;
+	font-weight: bold;
+    margin-bottom: 10px;
+}
+.products1 section #price{
+    font-size: 24px;
+    background-color: rgb(43, 39, 38);
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    text-decoration: none;  
+}
+
+.modal {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    background-color: #f3f8ff;
+    padding: 0;
+    border: 2px solid #c5c5c5;
+    width: 300px;
+    height: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    display: none;
+}
+.modal .close{
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.products .more{
+    font-size: 26px;
+    background-color: rgb(43, 39, 38);
+    padding: 10px;
+    width: 260px;
+    text-align: center;
+    color: white;
+    margin: 50px 40%;
+    
+}
+#info{
+    display: grid;
+	width: 80%;
+	padding: 5vh 10%;
+	grid-template-columns: 55% 15%;
+	column-gap: 10%;
+}
+/*
+.information section#information_text{
+    box-shadow: 0 0 10px 0 #000000 inset;
+    box-shadow: 0 -40px 50px -30px #ffffff inset;
+}
+*/
+p.text_information{
+    font-size: 16px;
+    line-height: 1.5;
+}
+.text_information #more{
+    display: none;
+}
+.information section .btn{
+    width: 100%;
+    box-shadow: 0 -20px rgb(0, 0, 0);
+}
+#info button#read{
+    border: 0;
+    font-size: 24px;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    border-bottom: 2px dotted gray;
+    
+}
+#info .servies{
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+#info .servies section{
+	text-align: center;
+    padding: 20px;
+}
+.servies section img{
+    width: 100px;
+    margin-top: 10px;
+}
+#mailing{
+    display: grid;
+	width: 60%;
+	padding: 10vh 20%;
+    background-image: url(../images/фон.jpg);
+}
+#mailing h1{
+    font-size: 30px;
+    color: antiquewhite;
+    text-align: center;
+}
+#mailing h2{
+    font-size: 40px;
+    color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#mailing .a{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+	justify-items: center;
+}
+#mailing .a ul li{
+    font-size: 20px;
+    line-height: 2;
+    color: aliceblue;
+}
+/*
+#mailing .a section.aa{
+    border-left: 1px solid aliceblue;
+}
+*/
+#mailing .a section{
+    display: flex;
+
+    align-items: center;
+    background-color: aliceblue;
+    padding: 5px;
+}
+/*
+#mailing .a .aa1 {
+    border: 1px solid aliceblue;
+}
+
+#mailing .a .aa {
+    margin: 10px;
+}*/
+#mailing .a section input{
+    padding: 10px 15px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+#mailing .a section button{
+    padding: 10px;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: rgb(43, 39, 38);
+    border: none;
+}
+footer{
+    display: grid;
+	width: 80%;
+	padding: 10vh 10%;
+}
+#footer1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 30px;
+    padding-bottom: 20px;
+}
+#footer1 h3{
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+}
+#footer1 .a ul li{
+    display: inline;
+}
+#footer2{
+    
+    border-top: 1px solid gray;
+}
+#footer2 ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
